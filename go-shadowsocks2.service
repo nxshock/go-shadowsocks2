@@ -1,0 +1,13 @@
+[Unit]
+Description=Shadowsocks2 Server Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+ProtectHome=true
+ProtectSystem=true
+ExecStart=/usr/bin/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:password@:8388'
+
+[Install]
+WantedBy=multi-user.target
