@@ -8,6 +8,9 @@ ProtectHome=true
 ProtectSystem=strict
 PrivateDevices=true
 PrivateTmp=true
+NoNewPrivileges=true
+PrivateUsers=true
+ProtectClock=true
 ExecStart=/usr/bin/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:password@:8388'
 
 [Install]
