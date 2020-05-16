@@ -5,6 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=go-shadowsocks2
+CapabilityBoundingSet=
 DevicePolicy=strict
 PrivateDevices=true
 PrivateTmp=true
@@ -15,6 +16,7 @@ ProtectControlGroups=true
 ProtectHome=true
 ProtectKernelLogs=true
 ProtectKernelModules=true
+ProtectKernelTunables=true
 ProtectSystem=strict
 ProtectHostname=true
 ExecStart=/usr/bin/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:password@:8388'
