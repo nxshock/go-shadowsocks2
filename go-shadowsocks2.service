@@ -4,13 +4,19 @@ After=network.target
 
 [Service]
 Type=simple
-ProtectHome=true
-ProtectSystem=strict
+User=go-shadowsocks2
+DevicePolicy=strict
 PrivateDevices=true
 PrivateTmp=true
 NoNewPrivileges=true
 PrivateUsers=true
 ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectSystem=strict
+ProtectHostname=true
 ExecStart=/usr/bin/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:password@:8388'
 
 [Install]
