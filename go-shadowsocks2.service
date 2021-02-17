@@ -1,25 +1,41 @@
 [Unit]
 Description=Shadowsocks2 Server Service
 After=network.target
+Requires=network.target
 
 [Service]
 Type=simple
 User=go-shadowsocks2
+ExecStart=/usr/bin/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:password@:8388'
+
 CapabilityBoundingSet=
 DevicePolicy=closed
+IPAccounting=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+NoNewPrivileges=true
 PrivateDevices=true
 PrivateTmp=true
-NoNewPrivileges=true
 PrivateUsers=true
 ProtectClock=true
 ProtectControlGroups=true
+ProtectControlGroups=true
 ProtectHome=true
+ProtectHostname=true
 ProtectKernelLogs=true
 ProtectKernelModules=true
 ProtectKernelTunables=true
 ProtectSystem=strict
-ProtectHostname=true
-ExecStart=/usr/bin/go-shadowsocks2 -s 'ss://AEAD_CHACHA20_POLY1305:password@:8388'
+ReadWritePaths=
+RemoveIPC=true
+RestrictAddressFamilies=~AF_PACKET AF_NETLINK AF_UNIX
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@resources
+UMask=0027
 
 [Install]
 WantedBy=multi-user.target
