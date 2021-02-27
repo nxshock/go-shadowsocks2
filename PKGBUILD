@@ -14,7 +14,7 @@ options=("!strip")
 source=("https://github.com/shadowsocks/$pkgname/archive/v$pkgver.tar.gz"
 	"$pkgname.service"
 	"$pkgname.sysusers")
-sha256sums=('67442d32fecf4564dd0fb1d444da2c03a268441b240dbe6cba471d0c52bece3b'
+sha256sums=('b4e9396b121eec140aede426450fb579e67e6ba8b905f91ed022e41233a11456'
 	'SKIP'
 	'SKIP')
 
