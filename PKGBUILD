@@ -1,7 +1,7 @@
 # Maintainer: NXShock <nxshock@gmail.com>
 
 pkgname=go-shadowsocks2
-pkgver=0.1.3
+pkgver=0.1.4
 pkgrel=0
 pkgdesc="Next-generation Shadowsocks in Go"
 arch=('x86_64' 'aarch64')
@@ -14,7 +14,7 @@ options=("!strip")
 source=("https://github.com/shadowsocks/$pkgname/archive/v$pkgver.tar.gz"
 	"$pkgname.service"
 	"$pkgname.sysusers")
-sha256sums=('db915214583a273b01658f62b49638438180cc8e7997e6dfe5919bd4e46047c2'
+sha256sums=('67442d32fecf4564dd0fb1d444da2c03a268441b240dbe6cba471d0c52bece3b'
 	'SKIP'
 	'SKIP')
 
