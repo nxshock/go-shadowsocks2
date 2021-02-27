@@ -20,7 +20,7 @@ sha256sums=('67442d32fecf4564dd0fb1d444da2c03a268441b240dbe6cba471d0c52bece3b'
 
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
-	go build -ldflags "-s -w"
+	go build -buildmode=pie -ldflags "-s -w"
 }
 
 package() {
